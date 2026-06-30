@@ -9,7 +9,11 @@ import com.codecodence.admin_panel_backend.security.JwtUtil;
 
 @RestController
 @RequestMapping("/api/otp")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+	    "http://localhost:3000",
+	    "http://localhost:5173",
+	    "https://code-codence.vercel.app"
+	})
 public class OtpController {
 
     private final OtpService otpService;
